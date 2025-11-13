@@ -1,0 +1,114 @@
+/* ======== ESTILO GERAL ======== */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* ======== TÍTULOS ======== */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  margin-bottom: 45px;
+}
+
+/* ======== QUADRO DAS FOTOS ======== */
+.frame {
+  position: relative;
+  margin: 40px auto;
+  width: 280px;
+  height: 280px;
+  border: 6px solid #d4af37;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3), 0 0 80px rgba(212, 175, 55, 0.05);
+  background: radial-gradient(circle at center, #1a1a1a 60%, #000);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.frame.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== FOTO ======== */
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta o corte da foto para preencher o quadro */
+  object-position: center;
+  border-radius: 14px;
+  transition: transform 0.6s ease;
+}
+
+/* ======== EFEITOS ======== */
+.frame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+}
+
+.frame:hover .photo {
+  transform: scale(1.1);
+}
+
+/* ======== TEXTO ======== */
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+  max-width: 600px;
+  margin: 25px auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== ASSINATURA ======== */
+.signature {
+  margin-top: 60px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #d4af37;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 600px) {
+  .frame {
+    width: 220px;
+    height: 220px;
+    border-width: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

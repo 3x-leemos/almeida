@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Sara</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="imagem/favicon.ico.png" />
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Para Sara</h1>
+    <h2>Um toque de amor em cada detalhe.</h2>
+
+    <div class="frame">
+      <img src="imagem/image1.jpeg" alt="Sara sorrindo" class="photo">
+    </div>
+
+    <p>
+      Sara, desde o instante em que te conheci, percebi algo diferente.  
+      Seu olhar tem o poder de aquecer o dia, e o seu sorriso —  
+      é como o sol nascendo depois de uma noite longa.
+    </p>
+
+    <div class="frame">
+      <img src="imagem/Sara Almeida 200.jpeg" alt="Sara feliz" class="photo">
+    </div>
+
+    <p>
+      Este site é só uma pequena forma de dizer  
+      o quanto você é especial para mim,  
+      e como cada lembrança sua deixa o mundo mais bonito.
+    </p>
+
+        <section class="carta-section">
+      <h2 class="carta-title">Carta para Sara</h2>
+      <div class="carta">
+        <p>Sara,</p>
+        <p>Desde o instante em que cruzamos olhares, algo dentro de mim mudou. É difícil explicar — talvez porque não seja coisa da razão, mas do instinto. Existe em você uma presença que silencia o mundo e, ao mesmo tempo, desperta tudo o que há de mais vivo em mim.</p>
+        <p>Não é apenas a beleza, embora ela seja inegável. É o jeito como você existe — simples, autêntica, natural — como se o tempo parasse um pouco para te observar também. Você tem essa energia que acalma e, ao mesmo tempo, provoca. Uma mistura de paz e tempestade, e é impossível não querer se perder nesse equilíbrio.</p>
+        <p>Quando penso em você, o coração desacelera e acelera ao mesmo tempo. Parece loucura, mas é isso que me faz sentir vivo. Não é um amor tranquilo; é um amor que pulsa, que move, que me faz querer ser alguém melhor só para merecer o privilégio de estar ao seu lado.</p>
+        <p>Admiro sua força, o brilho dos seus olhos quando fala do que ama, e o som da sua risada que carrega leveza e verdade. Há algo de raro em você, Sara. Algo que não se explica, apenas se sente — e quanto mais sinto, mais quero sentir.</p>
+        <p>Quero viver momentos reais contigo. Não daqueles perfeitos e ensaiados, mas os sinceros — os que começam com um olhar e terminam com um silêncio que diz mais do que mil palavras. Quero estar presente nos dias bons, mas principalmente nos dias comuns, porque sei que até o simples se torna extraordinário quando é você quem está perto.</p>
+        <p>Eu poderia escrever mil palavras, mas nenhuma seria suficiente para traduzir o que acontece quando penso em ti. Existe desejo, sim — mas é um desejo que ultrapassa o físico. É o desejo de estar, de cuidar, de construir algo que o tempo respeite.</p>
+        <p>Você desperta em mim o tipo de sentimento que os homens não costumam confessar: a vulnerabilidade de amar de verdade. De querer ser abrigo, e ao mesmo tempo, encontrar abrigo em ti.</p>
+        <p>Talvez eu não saiba o que o futuro reserva, mas sei que, se o destino tiver um pouco de sensatez, vai nos colocar lado a lado. Porque tudo em mim insiste — de forma teimosa e bonita — que é com você que o mundo faz sentido.</p>
+
+<p>Não é à toa que sempre voltamos a nos ver e a nos falar. Talvez seja o destino, talvez tudo isso aconteça porque ficar juntos esteja no nosso predestino.</p>
+
+<p class="assinatura">Com todo o meu amor,<br>Guilherme 💛</p>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Script para fade-in suave -->
+  <script>
+    const elements = document.querySelectorAll('.frame, p');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
+
